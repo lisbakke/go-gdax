@@ -94,12 +94,12 @@ func (e *BookEntry) UnmarshalJSON(data []byte) error {
 		return errors.New("Expected string")
 	}
 
-	price, err := strconv.ParseFloat(priceString, 32)
+	price, err := strconv.ParseFloat(priceString, 64)
 	if err != nil {
 		return err
 	}
 
-	size, err := strconv.ParseFloat(sizeString, 32)
+	size, err := strconv.ParseFloat(sizeString, 64)
 	if err != nil {
 		return err
 	}
